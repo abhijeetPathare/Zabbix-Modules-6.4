@@ -9,9 +9,9 @@ class Module extends \Zabbix\Core\CModule {
         public function init(): void {
                 // Initialize main menu (CMenu class instance).
                 APP::Component()->get('menu.main')
-                        ->findOrAdd(_('Reports'))
+                        ->findOrAdd(_('Monitoring'))
                                 ->getSubmenu()
-                                        ->insertAfter('Availability report', (new \CMenuItem(_('Graph BG')))
+                                        ->insertAfter('Hosts', (new \CMenuItem(_('Graphs')))
                                                 ->setAction('charts.view')
                                         );
         }
